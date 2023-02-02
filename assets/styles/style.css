@@ -1,0 +1,552 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+.container{
+    width: 1200px;
+    height: 100%;
+}
+
+#banner{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-image: url("../images/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.banner-opacity{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.7;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+
+.banner-size{
+    width: inherit;
+    height: inherit;
+    position: relative;
+}
+
+.header-container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 10px;
+    z-index: 999;
+}
+
+.header-container ul{
+    color: white;
+    list-style-type: none;
+    display: flex;
+}
+
+.header-container ul li{
+    font-size: 18px;
+    padding: 30px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.header-container ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.header-container ul li:hover{
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.banner-headline{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.banner-headline h1{
+    font-size: 72px;
+    line-height: 95px;
+    font-weight: 600;
+}
+
+.clique-aqui{
+    position: absolute;
+    bottom: 40px;
+    animation: blink 3s infinite;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.write::after{
+    content: "|";
+    animation: blink 0.8s infinite;
+    margin-left: 4px;
+}
+
+.social{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 200px;
+}
+
+.social a{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social-container{
+    display: flex;
+    width: auto;
+    height: 100%;
+    border: 1px solid #FFF;
+    padding: 10px 30px;
+    text-align: center;
+    align-items: center;
+}
+
+.social-container img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#sobre{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background-color: #FFF;
+    padding: 30px;
+}
+
+.sobre-container{
+    display: flex;
+}
+
+.sobre-image{
+    flex: 1;
+    align-self: center;
+}
+
+.sobre-image-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-self: center;
+    align-items: center;
+}
+
+.sobre-image img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.contato-info{
+    width: max-content;
+}
+
+.sobre-image address{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.sobre-image address img{
+    border-radius: 0%;
+    width: 50px;
+    height: auto;
+}
+
+.sobre-image address a{
+    color: #333;
+    text-decoration: none;
+    margin-left: 10px; 
+    width: 100%;
+} 
+
+.sobre-text{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #333;
+}
+
+.sobre-title,
+.sobre-skills p,
+.sobre-skills-es p{
+    font-size: 32px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.sobre-desc{
+    text-align: justify;
+    font-size: 18px;
+}
+
+.sobre-skills,
+.sobre-skills-es{
+    width: inherit;
+    margin-top: 40px;
+}
+
+.skills-images{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-images img{
+    width: 20%;
+    min-width: 100px;
+    padding: 0px 15px;
+    margin-top: 10px;
+}
+
+#projetos{
+    background-color: black;
+    color: black;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.projetos-title{
+    color: #FFF;
+    text-align: center;
+    font-size: 32px;
+}
+
+.projetos-container,
+.projetos-container-mobile{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+.projetos-container-mobile{
+    display: none;
+}
+
+.projeto-single{
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+}
+
+.projeto-single-container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.projeto-single-background{
+    width: 100%;
+    min-height: 225px;
+    background-color: #FFF;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 0;
+}
+
+.projeto-title{
+    max-width: 240px;
+    font-size: 28px;
+    z-index: 999;
+    position: absolute;
+    left: 6%;
+    margin-bottom: 10px; 
+}
+
+.projeto-image{
+    width: 100%;
+    height: 450px;
+}
+
+.projeto-image img{
+    width: 40%;
+    border-radius: 50%;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    object-fit: cover;
+    position: absolute;
+}
+
+.projeto-image img:hover{
+    border: 3px solid #FFF;
+}
+
+.projeto-desc{
+    width: 25%;
+    position: absolute;
+    font-size: 16px;
+    margin-top: 10px;
+    right: 3%;
+    text-align: justify;
+}
+
+.projeto-desc a{
+    color: black;
+}
+
+@keyframes blink{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1210px){
+
+    .container{
+        width: 900px;
+    }
+
+    .banner-headline h1{
+        font-size: 48px;
+        line-height: 60px;
+    }
+
+    .projeto-image{
+        overflow-y: hidden;
+        height: 380px;
+        z-index: 999;
+        position: relative;
+    }
+
+    .projeto-single-background{
+        min-height: 190px;
+    }
+
+    .projeto-title{
+        max-width: 220px;
+    }
+
+}
+
+@media (max-width: 950px){
+
+    .container{
+        width: 600px;
+    }
+
+    .banner-headline h1{
+        font-size: 42px;
+        line-height: 55px;
+    }
+
+    .sobre-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sobre-image{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    .projetos-container{
+        display: none;
+    }
+
+    .projetos-container-mobile{
+        display: flex;
+    }
+
+    .projeto-single-container{
+        color: #FFF;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projeto-single-container,
+    .projeto-title,
+    .projeto-desc{
+        position: static;
+        left: none;
+        transform: none;
+    }
+
+    .projeto-title{
+        margin-bottom: 30px;
+    }
+
+    .projeto-desc{
+        margin-top: 30px;
+    }
+
+    .projeto-title,
+    .projeto-desc{
+        width: 100%;
+        max-width: max-content;
+    }
+
+    .projeto-desc a{
+        color: #FFF;
+    }
+
+    .projeto-image{
+        height: 300px;
+    }
+
+    .projeto-image img{
+        width: 50%;
+    }
+
+    .projeto-single-background{
+        min-height: 150px;
+    }
+
+}
+
+@media (max-width: 650px){
+
+    .container{
+        width: 500px;
+    }
+
+    .projeto-single-background{
+        min-height: 125px;
+    }
+
+    .projeto-image{
+        height: 250px;
+    }
+
+}
+
+@media (max-width: 556px){
+
+    .container{
+        width: 400px;
+    }
+
+    .banner-headline h1{
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .projeto-single-background{
+        min-height: 100px;
+    }
+
+    .projeto-image{
+        height: 200px;
+    }
+
+}
+
+@media (max-width: 500px){
+
+    .container{
+        width: 400px;
+    }
+
+    .header-container ul li{
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .banner-headline h1{
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .sobre-image address img{
+        width: 20px;
+    }
+    
+    .contato-info address a,
+    .sobre-desc{
+        font-size: 14px;
+    }
+
+    .skills-images img{
+        min-width: 80px;
+    }
+
+}
+
+@media (max-width: 400px){
+
+    .container{
+        width: 300px;
+    }
+
+    .social a{
+        font-size: 14px;
+    }
+    
+    .social-container{
+        padding: 5px 15px;
+    }
+    
+    .social-container img{
+        margin-right: 5px;
+    }
+
+    .sobre-image-container{
+        width: 100%;
+    }
+
+    .sobre-image address a{
+        font-size: 12px;
+    } 
+
+    .sobre-desc{
+        padding: 0px 10px;
+    }
+
+    .skills-images{
+        flex-wrap: wrap;
+    }
+
+    .projeto-single-background{
+        min-height: 75px;
+    }
+
+    .projeto-image{
+        height: 150px;
+    }
+
+}
