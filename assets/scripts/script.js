@@ -15,9 +15,6 @@ function writer(words){
         //Exibindo cada letra do meu headline
         setTimeout(() => {words.innerHTML += letter}, 105 * i)
 
-        //Executando novamente o meu efeito
-        setInterval(() => writer(words), 15000)
-
     });
 
 }
