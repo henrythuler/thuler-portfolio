@@ -18,6 +18,7 @@
     color: white;
     width: fit-content;
     text-decoration: none;
+    height: fit-content;
 }
 
 .language-image-link p{
@@ -524,7 +525,7 @@
 @media (max-width: 500px){
 
     .language-image-link{
-        top: 81%;
+        top: 85%;
         left: 50%;
         transform: translate(-50%);
     }
